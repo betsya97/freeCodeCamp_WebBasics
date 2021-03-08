@@ -1,0 +1,87 @@
+
+<!--Basic CSS (cascading Style sheets)-->
+
+<!--useGoogle Fonts to import them-->
+<!-- use " " for font names with space in them, not required for other ie. "Time New" vs Lobster-->
+<link ref= "https://fonts.googleapis.com/css?family=Lobster", rel = "stylesheet" type = "text/css">
+
+ <!-- choose all h2 to be blue with this block-->
+ <!--<h2 style = "color: red;">CatPhotoApp</h2>--> 
+<style>
+    h2{
+        color: blue;
+    }
+</style> 
+
+
+ <!-- choose headings to be red with this block-->
+ <!--width controls how large images can be or even how wide text can be-->
+ <!-- #name customizes "id" like classes-->
+<style>
+    #cat-photo-form{
+        background-color: green;
+    }
+    .red-text {
+      color: red;
+    }
+    .smaller-image{
+        width: 100px;
+    }
+    .thick-green-border{
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 10px;
+    }  
+    .silver-background{
+        background-color: silver;
+    } 
+    p{
+        font-size: 16px;
+        font-family: monospace;
+    }
+    h2{
+        font-family: Lobster;
+    }
+
+    [type='checkbox']{
+      margin-top:10px;
+      margin-bottom:15px;
+    }
+  </style>
+  <!--could  choose certain types like p dividers and change their font-->
+  
+  <!--classes in CSS-->
+  <h2 class = "red-text">CatPhotoApp</h2>
+    
+  <h2>CatPhotoApp</h2>
+<main>
+  <p class = "red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img class = "smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <div class = "silver-background">
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+<!--id should be unique, this would make it  easier to use with javascript later-->
+  <form id = "cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
